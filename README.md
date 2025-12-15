@@ -14,33 +14,39 @@ This repository contains the source code for MMCS, a custom solver developed usi
 Prerequisites
 
 To compile and run this solver, you must have a working installation of OpenFOAM v2006.
+
+
 Set up the environment: Ensure your OpenFOAM environment is sourced (e.g., source $HOME/OpenFOAM/OpenFOAM-v2006/etc/bashrc).
 
-Compile the solver from directory: .\MMCS\MMCS
+Compile the solver from directory (.\MMCS\MMCS): 
+
 
     wmake
 
     Upon successful compilation, the executable [Solver Name] will be located in your $FOAM_USER_APPBIN directory.
 
-📁 Directory Structure
-Folder/File	Description
-MMCS.C	Main C++ source file containing the solver loop and equation setup.
-Make/files	Specifies the source files to compile.
-Make/options	Specifies the necessary libraries and include paths.
-Raytracing directory is included.
-Case file is available for testing the solver.
+# 📁 Directory Structure
+Folder/File	Description:  
+MMCS.C	Main C++ source file containing the solver loop and equation setup.  
+Make/files	Specifies the source files to compile.  
+Make/options	Specifies the necessary libraries and include paths.  
+laserDTRM Folder, for ray tracing.  
 
 # ⚙️ How to Run a Tutorial Case
 
-In case directory:
-Run the standard OpenFOAM setup utilities (if necessary):
-Bash
+The repository contains example cases demonstrating the solver's capabilities.
 
-blockMesh
-setFields
+    Navigate to a tutorial case:
+    Bash
 
-Execute the custom solver:
-MMCS
+cd case/  
 
-View the results using ParaView:
+Run the standard OpenFOAM setup utilities:  
+
+blockMesh  
+setFields  
+Execute the custom solver: 
+MMCS    
+
+View the results using ParaView:  
 paraFoam
